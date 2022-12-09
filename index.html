@@ -1,18 +1,176 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Proyecto Final</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Manuel Kanahuati Ceballos">
+    <title>Store Sales</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800 display=swap" rel="stylesheet">
+</head>
+<body class="main-content">
+    <header class="container header active" id="home">
+        <div class="header-content">
+            <div class="left-header">
+                <div class="h-shape"></div>
+                <div class="image">
+                    <img src="img/hero.jpg" alt="">
+                </div>
+            </div>
+            <div class="right-header">
+                <h1 class="name">
+                    Store Sales - <span>Time Series Forecasting.</span>
+                </h1>
+                <h2>
+                    <!-- Scroller Start -->
+                    <div class="scroller">
+                      <span>
+                        Final project<br/>
+                        Herramientas Enfocadas en la Ciencia de Datos<br/>
+                        Manuel Kanahuati Ceballos
+                      </span>
+                    </div>
+                    <!-- Scroller End -->
+                </h2>
+                <p>
+                    In this “getting started” competition, you’ll use time-series forecasting to forecast store sales on data from Corporación Favorita, a large Ecuadorian-based grocery retailer.
+                </p>
+                <p>
+                    Specifically, you'll build a model that more accurately predicts the unit sales for thousands of items sold at different Favorita stores. You'll practice your machine learning skills with an approachable training dataset of dates, store, and item information, promotions, and unit sales.
+                </p>
+                <div class="btn-con">
+                    <a target="_blank" href="https://www.kaggle.com/competitions/store-sales-time-series-forecasting/overview" class="main-btn">
+                        <span class="btn-text">Dataset</span>
+                        <span class="btn-icon"><i class="fa fa-database"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container about" id="about">
+            <div class="main-title">
+                <h2>Dataset <span>Description</span><span class="bg-text">Data Information</span></h2>
+            </div>
+            <div class="about-container">
+                <div class="left-about">
+                    <h4>File Descriptions</h4>
+                    <p>
+                        In this competition, you will predict sales for the thousands of product families sold at Favorita stores located in Ecuador.
+                        The training data includes dates, store and product information, whether that item was being promoted, as well as the sales numbers. 
+                        Additional files include supplementary information that may be useful in building your models.
+                    </p>
+                    <div class="btn-con">
+                        <a target="_blank" href="https://www.kaggle.com/competitions/store-sales-time-series-forecasting/overview" class="main-btn">
+                            <span class="btn-text">Dataset</span>
+                            <span class="btn-icon"><i class="fa fa-database"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="right-about">
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">train.csv</p>
+                            <p class="small-text">Training data<br /> comprising time series of features store_nbr, family, and onpromotion as well as the target sales</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">stores.csv</p>
+                            <p class="small-text">Store metadata <br />  including city, state, type, and cluster</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">holidays_events.csv</p>
+                            <p class="small-text">Holidays and Events, <br /> with metadata</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">oil.csv</p>
+                            <p class="small-text">Daily oil <br /> price</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="stat-title">Data Field Information</h4>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <p class="tl-duration">121.8 MB</p>
+                    <h5>train<span>.csv</span></h5> 
+                    <p>
+                        <strong>identifies</strong> the store at which the products are sold.
+                    </p>
+                    <p>
+                        <strong>family</strong> identifies the type of product sold.
+                    </p>
+                    <p>
+                        <strong>sales</strong> gives the total sales for a product family at a particular store at a given date. 
+                        Fractional values are possible since products can be sold in fractional units.
+                    </p>
+                    <p>
+                        <strong>onpromotion</strong> gives the total number of items in a product family that were being promoted at a store at a given date.
+                    </p>
+                    
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <p class="tl-duration">1.39 kB</p>
+                    <h5>stores<span>.csv</span></h5>
+                    <p>
+                        <strong>cluster</strong> is a grouping of similar stores.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <p class="tl-duration">22.31 kB</p>
+                    <h5>holidays_events<span>.csv</span></h5>
+                    <p>
+                        A holiday that is transferred officially falls on that calendar day, but was moved to another date by the government. 
+                        A transferred day is more like a normal day than a holiday.
+                        To find the day that it was actually celebrated, look for the corresponding row where type is Transfer.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <p class="tl-duration">20.58 kB</p>
+                    <h5>oil<span>.csv</span></h5>
+                    <p>
+                        Includes values during both the train and test data timeframes.
+                    </p>
+                    <p>
+                        Ecuador is an oil-dependent country and it's economical health is highly vulnerable to shocks in oil prices.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <h2>Hello World</h2>
-    <p>Set de datos del problema: Store Sales - Time Series Forecast</p>
-
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-
-  </body>
+    <div class="controls">
+        <div class="control active-btn" data-id="home" >
+            <i class="fas fa-home"></i>
+        </div>
+        <div class="control" data-id="about">
+            <i class="fa fa-database"></i>
+        </div>
+    </div>
+    <div class="theme-btn">
+        <i class="fas fa-adjust"></i>
+    </div>
+    <script src="app.js"></script>
+</body>
 </html>
